@@ -17,6 +17,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/', function () {
+    return view('website.index');
+});
+
+Route::get('/category', function () {
+    return view('website.category');
+});
+
+Route::get('/post', function () {
+    return view('website.post');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function (){
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard.index');
+    });
+});
+
+
+
