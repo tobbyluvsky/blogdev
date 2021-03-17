@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/', function () {
     return view('website.index');
-});
+})->name('homepage');;
 
 Route::get('/category', function () {
     return view('website.category');
@@ -39,6 +39,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function (){
     Route::get('/dashboard', function () {
         return view('admin.dashboard.index');
     });
+
+    Route::resource('category','CategoryController');
 });
 
 

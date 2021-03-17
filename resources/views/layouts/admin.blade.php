@@ -15,6 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{asset('admin')}}/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('admin')}}/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{asset('admin')}}/css/toastr.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -193,11 +194,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
+                        <a href="{{ route('category.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-tags"></i>
                             <p>
-                                Simple Link
-                                <span class="right badge badge-danger">New</span>
+                                Categories
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item mt-auto bg-danger">
+                        <a href="http://blogdev.test/logout" onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();"
+                           class="nav-link">
+                            <i class="nav-icon fas fa-sign-out-alt"></i>
+                            <p>
+                                Logout
                             </p>
                         </a>
                     </li>
@@ -244,5 +255,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('admin')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('admin')}}/js/adminlte.min.js"></script>
+<script src="{{asset('admin')}}/js/toastr.js"></script>
+<script>
+    @if(Session::has('success'))
+    // Display a success toast, with a title
+    toastr.success("{{ Session::get('success') }}");
+    @endif
+
+    @if(Session::has('error'))
+    // Display a success toast, with a title
+    toastr.error("{{ Session::get('error') }}");
+    @endif
+</script>
 </body>
 </html>
