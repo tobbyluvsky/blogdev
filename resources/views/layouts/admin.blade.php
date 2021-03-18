@@ -202,6 +202,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="{{ route('tag.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-tag"></i>
+                            <p>
+                                Tags
+                            </p>
+                        </a>
+                    </li>
+
                     <li class="nav-item mt-auto bg-danger">
                         <a href="http://blogdev.test/logout" onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();"
