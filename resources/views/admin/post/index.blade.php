@@ -36,6 +36,7 @@
                                         <th>Image</th>
                                         <th>Title</th>
                                         <th>Category</th>
+                                        <th>Tag</th>
                                         <th>Author</th>
                                         <th style="width: 40px">Actions</th>
                                     </tr>
@@ -53,6 +54,12 @@
                                                 </td>
                                                 <td>{{ $post->title}}</td>
                                                 <td>{{ $post->category->name}}</td>
+                                                <td>
+                                                    @foreach($post->tags as $tag)
+                                                      <span class="btn btn-sm btn-primary">{{$tag->name}}</span>
+                                                    @endforeach
+
+                                                </td>
                                                 <td>{{ $post->user->name }}</td>
                                                 <td class="d-flex">
                                                     <a href="{{ route('post.edit',[$post->id]) }}" class="btn btn-sm btn-primary mr-1"><i class="fas fa-edit"></i></a>
