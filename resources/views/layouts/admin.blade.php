@@ -211,6 +211,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="{{ route('post.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-tag"></i>
+                            <p>
+                                Post
+                            </p>
+                        </a>
+                    </li>
+
                     <li class="nav-item mt-auto bg-danger">
                         <a href="http://blogdev.test/logout" onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();"
@@ -265,6 +274,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE App -->
 <script src="{{asset('admin')}}/js/adminlte.min.js"></script>
 <script src="{{asset('admin')}}/js/toastr.js"></script>
+<script src="{{asset('admin')}}/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        bsCustomFileInput.init();
+    });
+</script>
+
 <script>
     @if(Session::has('success'))
     // Display a success toast, with a title
