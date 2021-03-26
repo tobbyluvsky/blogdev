@@ -98,7 +98,7 @@
                                                 <label for="description">Post Description</label>
                                                 <textarea class="form-control"  name="description" id="description" cols="5">{{$post->description}}</textarea>
                                             </div>
-
+faactory
 
                                         </div>
 
