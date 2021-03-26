@@ -18,17 +18,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', function () {
-    return view('website.index');
-})->name('homepage');;
-
-Route::get('/category', function () {
-    return view('website.category');
-});
-
-Route::get('/post', function () {
-    return view('website.post');
-});
+Route::get('/', 'FrontendController@home')->name('homepage');
+Route::get('/category', 'FrontendController@category')->name('website.category');
+Route::get('/post/{slug}', 'FrontendController@post')->name('website.post');
 
 
 Auth::routes();

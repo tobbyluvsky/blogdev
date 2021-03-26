@@ -1,0 +1,47 @@
+[33mcommit a7f4877c0af911336cee1929514b4a81091358bc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: tobbyluvsky <tobby995@gmail.com>
+Date:   Fri Mar 26 12:23:27 2021 +0800
+
+    Post,tag,category factory added
+
+[33mcommit ac8fcbf7df2413da7f1bcd680be91dd53baf4686[m
+Author: tobbyluvsky <tobby995@gmail.com>
+Date:   Fri Mar 26 11:47:50 2021 +0800
+
+    Adding WYSIWYG to post
+
+[33mcommit 08ad7df7fc05cb6f49eea5776cdfbb2d1556218a[m
+Author: tobbyluvsky <tobby995@gmail.com>
+Date:   Thu Mar 25 17:30:14 2021 +0800
+
+    Add Tag to Post
+
+[33mcommit 5bb4d76aff56bd54a7bd86bcb66115a9a26874f2[m
+Author: tobbyluvsky <tobby995@gmail.com>
+Date:   Thu Mar 25 16:40:18 2021 +0800
+
+    Post CRUD completed
+
+[33mcommit 89859b6663f0799aa461e9aaf8d40c0d059a60b8[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: tobbyluvsky <tobby995@gmail.com>
+Date:   Thu Mar 18 09:16:29 2021 +0800
+
+    Tag crud done
+
+[33mcommit 84bbffeaaf883898c7d216acee6295fab7baac15[m
+Author: tobbyluvsky <tobby995@gmail.com>
+Date:   Wed Mar 17 15:26:17 2021 +0800
+
+    category crud completed
+
+[33mcommit 49803b6c0e25617b8ff8acc36c3f51dfb2ac7a0a[m
+Author: tobbyluvsky <tobby995@gmail.com>
+Date:   Tue Mar 16 15:13:58 2021 +0800
+
+    homepage and admin page done
+
+[33mcommit 89ae33aba5da3a1ddfe5bfb6a25226c438b4d467[m
+Author: tobbyluvsky <tobby995@gmail.com>
+Date:   Tue Mar 16 14:16:14 2021 +0800
+
+    laravel installation and auth

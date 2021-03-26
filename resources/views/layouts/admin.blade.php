@@ -223,7 +223,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
 
-                    <li class="nav-item mt-auto bg-danger">
+                    <li class="nav-item mt-auto ">
                         <a href="http://blogdev.test/logout" onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();"
                            class="nav-link">
@@ -231,6 +231,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <p>
                                 Logout
                             </p>
+                        </a>
+                    </li>
+                    <hr>
+                    <li class="text-center mt-1">
+                        <a href="{{route('homepage')}}" class="btn btn-sm btn-primary" target="_blank">
+                                Visit Website
                         </a>
                     </li>
                 </ul>

@@ -48,7 +48,7 @@ $factory->define(Post::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence(),
         'slug' => Str::slug( $faker->sentence()),
-        'image' => $faker->imageUrl(600, 400),
+        'image' => 'https://picsum.photos/600/400',
         'description' => $faker->text(400),
         'category_id' => factory('App\Category')->create()->id,
         'user_id' => 1,
