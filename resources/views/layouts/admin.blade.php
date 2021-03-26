@@ -16,8 +16,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('admin')}}/css/adminlte.min.css">
     <link rel="stylesheet" href="{{asset('admin')}}/css/toastr.css">
+    <link rel="stylesheet" href="{{asset('admin/css/summernote-bs4.min.css')}}">
+
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    @yield('style')
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -267,6 +270,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 
+@yield('script')
 <!-- jQuery -->
 <script src="{{asset('admin')}}/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -275,10 +279,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('admin')}}/js/adminlte.min.js"></script>
 <script src="{{asset('admin')}}/js/toastr.js"></script>
 <script src="{{asset('admin')}}/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script src="{{asset('admin/js/summernote-bs4.min.js')}}"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
         bsCustomFileInput.init();
+    });
+</script>
+
+<script>
+    $('#description').summernote({
+        tabsize: 2,
+        height: 100
     });
 </script>
 

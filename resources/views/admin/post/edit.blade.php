@@ -5,13 +5,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Edit Category</h1>
+                <h1 class="m-0 text-dark">Edit Post</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('homepage') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('category.index') }}">Category List</a></li>
-                    <li class="breadcrumb-item active">Edit Category</li>
+                    <li class="breadcrumb-item"><a href="{{ route('post.index') }}">Post List</a></li>
+                    <li class="breadcrumb-item active">Edit Post</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -31,7 +31,7 @@
                             <!-- /.card-header -->
                             <div class="card-body p-0">
                                 <div class="row">
-                                    <div class="col-12 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                                    <div class="col-12 col-lg-8 offset-lg-2 col-md-8 offset-md-2">
                                      <form action="{{route('post.update',[$post->id])}}" method="post" enctype="multipart/form-data">
                                          @method('PUT')
                                          @csrf
@@ -75,9 +75,10 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="description">Post Tag</label>
+                                                <label for="Post tag">Post Tag</label>
+                                                <div class="d-flex flex-wrap">
                                                 @foreach($tags as $tag)
-                                                    <div class="custom-control custom-checkbox">
+                                                    <div class="custom-control custom-checkbox" style="margin-right: 20px">
                                                         <input class="custom-control-input" name="tags[]" type="checkbox" id="tag{{$tag->id}}" value="{{ $tag->id }}"
 
                                                         @foreach($post->tags as $t)
@@ -90,6 +91,7 @@
                                                     </div>
 
                                                 @endforeach
+                                                </div>
                                             </div>
 
                                             <div class="form-group">

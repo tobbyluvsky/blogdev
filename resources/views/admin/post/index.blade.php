@@ -62,6 +62,8 @@
                                                 </td>
                                                 <td>{{ $post->user->name }}</td>
                                                 <td class="d-flex">
+
+                                                    <a href="{{ route('post.show',[$post->id]) }}" class="btn btn-sm  btn-success  mr-1"><i class="fas fa-eye"></i></a>
                                                     <a href="{{ route('post.edit',[$post->id]) }}" class="btn btn-sm btn-primary mr-1"><i class="fas fa-edit"></i></a>
 
                                                     <form action="{{ route('post.destroy',[$post->id]) }}" class="mr-1" method="POST">
@@ -70,7 +72,7 @@
                                                         <button class="btn btn-sm  btn-danger" type="submit"><i class="fas fa-trash"></i></button>
                                                     </form>
 
-                                                    <a href="{{ route('post.show',[$post->id]) }}" class="btn btn-sm  btn-success  mr-1"><i class="fas fa-eye"></i></a>
+
                                                 </td>
                                             </tr>
                                         @endforeach
