@@ -65,7 +65,7 @@
 
               <h2><a href="{{ route('website.post',['slug' => $post->slug]) }}">{{$post->title}}</a></h2>
               <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="{{asset('website')}}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="{{asset($post->user->image)}}" alt="Image" class="img-fluid"></figure>
                 <span class="d-inline-block mt-1">By <a href="#">{{ $post->user->name }}</a></span>
                 <span>&nbsp;-&nbsp; {{$post->created_at->diffForHumans()}}</span>
               </div>
@@ -105,7 +105,7 @@
         <div class="col-md-7">
           @foreach($lastFooterPost as $post)
           <a href="{{ route('website.post',['slug' => $post->slug]) }}" class="hentry img-2 v-height mb30 gradient" style="background-image:url('{{$post->image}}');">
-            <span class="post-category text-white bg-success">Nature</span>
+            <span class="post-category text-white bg-success">{{ $post->category->name }}</span>
             <div class="text text-sm">
               <h2>{{ $post->title }}</h2>
               <span>{{$post->created_at->diffForHumans()}}</span>
@@ -123,7 +123,7 @@
             {{--</a>--}}
             @foreach($middleFooterPost2 as $post)
             <a href="{{ route('website.post',['slug' => $post->slug]) }}" class="hentry mr-auto v-height img-2  gradient" style="background-image:url('{{$post->image}}');">
-              <span class="post-category text-white bg-warning">Lifestyle</span>
+              <span class="post-category text-white bg-warning">{{ $post->category->name }}</span>
               <div class="text text-sm">
                 <h2>{{ $post->title }}</h2>
                 <span>{{$post->created_at->diffForHumans()}}</span>

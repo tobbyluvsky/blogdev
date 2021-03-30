@@ -231,6 +231,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </p>
                         </a>
                     </li>
+                    <li class="nav-header">Your Account</li>
+                    <li class="nav-item">
+                        <a href="{{ route('user.profile') }}" class="nav-link">
+                            <i class="nav-icon far fa-user"></i>
+                            <p>
+                                Your Profile
+                            </p>
+                        </a>
+                    </li>
 
                     <li class="nav-item mt-auto ">
                         <a href="http://blogdev.test/logout" onclick="event.preventDefault();
