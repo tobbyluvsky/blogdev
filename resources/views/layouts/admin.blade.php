@@ -16,7 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('admin')}}/css/adminlte.min.css">
     <link rel="stylesheet" href="{{asset('admin')}}/css/toastr.css">
-    <link rel="stylesheet" href="{{asset('admin/css/summernote-bs4.min.css')}}">
+    {{--<link rel="stylesheet" href="{{asset('admin/css/summernote-bs4.min.css')}}">--}}
 
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
@@ -303,7 +303,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('admin')}}/js/adminlte.min.js"></script>
 <script src="{{asset('admin')}}/js/toastr.js"></script>
 <script src="{{asset('admin')}}/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-<script src="{{asset('admin/js/summernote-bs4.min.js')}}"></script>
+{{--<script src="{{asset('admin/js/summernote-bs4.min.js')}}"></script>--}}
+<script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
+
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#description' ) )
+
+</script>
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -311,12 +318,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
 </script>
 
-<script>
-    $('#description').summernote({
-        tabsize: 2,
-        height: 100
-    });
-</script>
+{{--<script>--}}
+    {{--$('#description').summernote({--}}
+        {{--tabsize: 2,--}}
+        {{--height: 100--}}
+    {{--});--}}
+{{--</script>--}}
 
 <script>
     @if(Session::has('success'))

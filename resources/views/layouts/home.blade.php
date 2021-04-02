@@ -44,18 +44,16 @@
                 </div>
 
                 <div class="col-4 site-logo">
-                    <a href="index.html" class="text-black h2 mb-0">Mini Blog</a>
+                    <a href="{{route('homepage')}}" class="text-black h2 mb-0">Mini Blog</a>
                 </div>
 
                 <div class="col-8 text-right">
                     <nav class="site-navigation" role="navigation">
                         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
-                            <li><a href="category.html">Home</a></li>
-                            <li><a href="category.html">Politics</a></li>
-                            <li><a href="category.html">Tech</a></li>
-                            <li><a href="category.html">Entertainment</a></li>
-                            <li><a href="category.html">Travel</a></li>
-                            <li><a href="category.html">Sports</a></li>
+                            @foreach($categories as $category)
+                            <li><a href="{{route('website.category',['slug'=>$category->slug])}}">{{$category->name}}</a></li>
+                            @endforeach
+
                             <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
                         </ul>
                     </nav>

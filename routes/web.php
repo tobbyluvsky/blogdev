@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 
 Route::get('/', 'FrontendController@home')->name('homepage');
-Route::get('/category', 'FrontendController@category')->name('website.category');
+Route::get('/category/{slug}', 'FrontendController@category')->name('website.category');
 Route::get('/post/{slug}', 'FrontendController@post')->name('website.post');
 
 
