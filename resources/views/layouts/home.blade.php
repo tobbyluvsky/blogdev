@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="col-4 site-logo">
-                    <a href="{{route('homepage')}}" class="text-black h2 mb-0">Mini Blog</a>
+                    <a href="{{route('homepage')}}" class="text-black h2 mb-0">{{ $setting->name }}</a>
                 </div>
 
                 <div class="col-8 text-right">
@@ -72,7 +72,7 @@
             <div class="row mb-5">
                 <div class="col-md-4">
                     <h3 class="footer-heading mb-4">About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat reprehenderit magnam deleniti quasi saepe, consequatur atque sequi delectus dolore veritatis obcaecati quae, repellat eveniet omnis, voluptatem in. Soluta, eligendi, architecto.</p>
+                    <p>{!!  $setting->description !!} </p>
                 </div>
                 <div class="col-md-3 ml-auto">
                     <!-- <h3 class="footer-heading mb-4">Navigation</h3> -->

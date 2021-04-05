@@ -26,7 +26,7 @@ class FrontendController extends Controller
 
 
         //for general post
-        $recentPosts = Post::with('category','user')->orderBy('created_at','DESC')->paginate(10);
+        $recentPosts = Post::with('category','user')->orderBy('created_at','DESC')->paginate(6);
 
         return view('website.index',compact('posts','recentPosts','firstPost2','middlePost','lastPost','firstFooterPost','middleFooterPost2','lastFooterPost'));
     }

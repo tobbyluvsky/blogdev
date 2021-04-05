@@ -79,8 +79,10 @@
         @endforeach
 
       </div>
-      <div class="row text-center pt-5 border-top">
-        {{ $recentPosts->links() }}
+      <div class="row text-center pt-5 border-top ">
+
+          {{ $recentPosts->links() }}
+
       </div>
     </div>
   </div>
