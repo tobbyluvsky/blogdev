@@ -41,6 +41,7 @@ class SettingController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'copyright' => 'required',
+            'phone_no' => 'required|max:11',
 
         ]);
 

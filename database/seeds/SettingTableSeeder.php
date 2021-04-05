@@ -15,6 +15,7 @@ class SettingTableSeeder extends Seeder
 
             'name' => 'BlogDev',
             'copyright' => 'Copyright © 2021 All rights reserved ',
+            'phone_no' => '08102320829',
 
 
         ]);

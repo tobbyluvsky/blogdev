@@ -23,6 +23,7 @@ Route::get('/category/{slug}', 'FrontendController@category')->name('website.cat
 Route::get('/post/{slug}', 'FrontendController@post')->name('website.post');
 Route::get('/about', 'FrontendController@about')->name('website.about');
 Route::get('/contact', 'FrontendController@contact')->name('website.contact');
+Route::post('/contact', 'FrontendController@send_message')->name('website.store');
 
 
 Auth::routes();
@@ -43,6 +44,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function (){
 
     Route::get('/settings','SettingController@edit')->name('setting.index');
     Route::post('/settings','SettingController@update')->name('setting.update');
+
 
 });
 

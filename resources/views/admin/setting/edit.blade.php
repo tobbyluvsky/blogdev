@@ -80,6 +80,20 @@
 
                                                 <div class="col-6">
                                                     <div class="form-group">
+                                                        <label for="name">Phone Number</label>
+                                                        <input type="text" name="phone_no" value="{{$setting->phone_no}}" class="form-control" id="title" placeholder="Enter setting Title">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="name">Address</label>
+                                                        <textarea class="form-control" name="address" >{!! $setting->address !!}</textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="form-group">
                                                         <label for="name">Copyright</label>
                                                         <input type="text" name="copyright" value="{{$setting->copyright}}" class="form-control" id="title" placeholder="Enter setting Title">
                                                     </div>

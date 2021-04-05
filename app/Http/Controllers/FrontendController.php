@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
+use Session;
 use App\Category;
 use App\Post;
 use App\Tag;
+use App\User;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -62,6 +65,35 @@ class FrontendController extends Controller
         else{
             return redirect('/');
         }
+
+    }
+
+    public function about(){
+        $user = User::first();
+        return view('website.about',compact('user'));
+    }
+
+    public function contact(){
+        return view('website.contact');
+    }
+
+    public function send_message(Request $request,Contact $contact){
+
+
+
+        $this->validate($request,[
+            'name' => 'required|max:200',
+            'email' => 'required|email|max:200',
+            'subject' => 'required|max:255',
+            'message' => 'required|min:100',
+        ]);
+
+
+        $contact = Contact::create($request->all());
+
+        Session::flash('success', 'message sent successfully');
+        return redirect()->back();
+
 
     }
 
