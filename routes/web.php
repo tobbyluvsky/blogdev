@@ -21,6 +21,8 @@ Route::get('/', function () {
 Route::get('/', 'FrontendController@home')->name('homepage');
 Route::get('/category/{slug}', 'FrontendController@category')->name('website.category');
 Route::get('/post/{slug}', 'FrontendController@post')->name('website.post');
+Route::get('/about', 'FrontendController@about')->name('website.about');
+Route::get('/contact', 'FrontendController@contact')->name('website.contact');
 
 
 Auth::routes();
