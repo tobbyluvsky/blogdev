@@ -34,11 +34,15 @@
 
         <div class="pt-5">
           <p>
-            Categories:  <a href="#">{{$post->category->name}}</a>,
+
+            Categories:
+
+            <a href="">{{$post->category->name}}</a>,
+
              @if($post->tags()->count() > 0)
               Tags:
               @foreach($post->tags as $tag)
-              <a href="#">{{$tag->name}}</a>
+              <a href="{{route('website.tag',['slug'=>$tag->slug])}}">#{{$tag->name}}</a>
                @endforeach
           </p>
              @endif
@@ -215,7 +219,7 @@
           <ul class="categories">
             @foreach($categories as $category)
 
-            <li><a href="#">{{ $category->name }}<span>(12)</span></a></li>
+            <li><a href="{{route('website.category',['slug'=>$category->slug])}}">{{ $category->name }}<span>(12)</span></a></li>
               @endforeach
           </ul>
         </div>
@@ -225,7 +229,7 @@
           <h3 class="heading">Tags</h3>
           <ul class="tags">
             @foreach($tags as $tag)
-              <li><a href="#">{{ $tag->name }}</a></li>
+              <li><a href="{{route('website.tag',['slug'=>$tag->slug])}}">{{ $tag->name }}</a></li>
             @endforeach
 
 

@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/', 'FrontendController@home')->name('homepage');
 Route::get('/category/{slug}', 'FrontendController@category')->name('website.category');
 Route::get('/post/{slug}', 'FrontendController@post')->name('website.post');
+Route::get('/tag/{slug}', 'FrontendController@tag')->name('website.tag');
 Route::get('/about', 'FrontendController@about')->name('website.about');
 Route::get('/contact', 'FrontendController@contact')->name('website.contact');
 Route::post('/contact', 'FrontendController@send_message')->name('website.store');
@@ -44,6 +45,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function (){
 
     Route::get('/settings','SettingController@edit')->name('setting.index');
     Route::post('/settings','SettingController@update')->name('setting.update');
+
+
+    Route::get('/message','ContactController@index')->name('contact.index');
+    Route::get('/message/show/{id}','ContactController@show')->name('contact.show');
+    Route::delete('/message/delete/{id}','ContactController@delete')->name('contact.destroy');
+
 
 
 });

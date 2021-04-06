@@ -20,10 +20,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <span>Category</span>
-        <h3>{{$category->name}}</h3>
-        @if($category->description)
-        <p>{{$category->description}}</p>
+        <span>Tag</span>
+        <h3>{{$tag->name}}</h3>
+        @if($tag->description)
+        <p>{{$tag->description}}</p>
         @endif
       </div>
     </div>

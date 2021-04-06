@@ -39,8 +39,21 @@ class FrontendController extends Controller
 
 
         if ($category){
-            $posts = Post::where('category_id',$category->id)->paginate(9);
+            $posts = Post::where('category_id',$category->id)->paginate(6);
             return view('website.category',compact('category','posts'));
+        }else{
+            return view('website.index');
+        }
+
+    }
+
+    public function tag($slug){
+        $tag = Tag::where('slug',$slug)->first();
+
+
+        if ($tag){
+            $posts = $tag->posts()->orderBy('created_at','DESC')->paginate(6);
+            return view('website.tag',compact('tag','posts'));
         }else{
             return view('website.index');
         }
