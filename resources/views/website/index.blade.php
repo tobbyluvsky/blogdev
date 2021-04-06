@@ -79,7 +79,7 @@
         @endforeach
 
       </div>
-      <div class="row text-center pt-5 border-top ">
+      <div class="text-center d-flex justify-content-center mt-2 ">
 
           {{ $recentPosts->links() }}
 

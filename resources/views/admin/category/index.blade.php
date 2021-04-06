@@ -65,6 +65,9 @@
                                 </table>
                             </div>
                             <!-- /.card-body -->
+                            <div class="text-center d-flex justify-content-center mt-2">
+                                {{$categories->links()}}
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -32,9 +32,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function (){
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard.index');
-    });
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
     Route::resource('category','CategoryController');
     Route::resource('tag','TagController');
