@@ -26,6 +26,8 @@ Route::get('/about', 'FrontendController@about')->name('website.about');
 Route::get('/contact', 'FrontendController@contact')->name('website.contact');
 Route::post('/contact', 'FrontendController@send_message')->name('website.store');
 
+Route::post('/newsletter', 'NewsletterController@store')->name('newsletter.store');
+
 
 Auth::routes();
 
@@ -48,6 +50,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function (){
     Route::get('/message','ContactController@index')->name('contact.index');
     Route::get('/message/show/{id}','ContactController@show')->name('contact.show');
     Route::delete('/message/delete/{id}','ContactController@delete')->name('contact.destroy');
+
+    Route::get('/newsletter','NewsletterController@newsletter')->name('newsletter.index');
+    Route::delete('/newsletter/delete/{id}','NewsletterController@delete')->name('newsletter.destroy');
 
 
 

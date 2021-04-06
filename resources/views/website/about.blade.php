@@ -40,10 +40,15 @@
       <div class="row justify-content-center text-center">
         <div class="col-md-5">
           <div class="subscribe-1 ">
+            @if(Session::has('success'))
+              <div class="alert alert-success">{{Session::get('success')}}</div>
+            @endif
             <h2>Subscribe to our newsletter</h2>
             <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nesciunt error illum a explicabo, ipsam nostrum.</p>
-            <form action="#" class="d-flex">
-              <input type="text" class="form-control" placeholder="Enter your email address">
+            <form action="{{route('newsletter.store')}}" method="post" class="p-5 bg-white">
+              @csrf
+              @include('includes.error')
+              <input type="email" name="email" class="form-control" placeholder="Enter your email address">
               <input type="submit" class="btn btn-primary" value="Subscribe">
             </form>
           </div>

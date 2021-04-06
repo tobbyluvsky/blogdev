@@ -60,6 +60,7 @@ class FrontendController extends Controller
 
     }
 
+
     public function post($slug){
         $post = Post::with('category','user')->where('slug',$slug)->first();
         $posts =  Post::with('category','user')->inRandomOrder()->limit(4)->get();
